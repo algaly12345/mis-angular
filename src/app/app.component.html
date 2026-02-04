@@ -1,0 +1,63 @@
+<div class="dashboard-layout">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h1 class="ims">IMS</h1>
+
+    <!-- 🔤 Language Switcher -->
+    <div class="lang-switcher">
+      <button (click)="switchLang('en')">EN</button>
+      <button (click)="switchLang('ar')">AR</button>
+    </div>
+
+    <ul class="nav-links">
+      <li *ngIf="isAuth()">
+        <a routerLink="/dashboard">{{ 'DASHBOARD' | translate }}</a>
+      </li>
+
+      <li *ngIf="isAuth()">
+        <a routerLink="/transaction">{{ 'TRANSACTIONS' | translate }}</a>
+      </li>
+
+      <li *ngIf="isAdmin()">
+        <a routerLink="/category">{{ 'CATEGORY' | translate }}</a>
+      </li>
+
+      <li *ngIf="isAdmin()">
+        <a routerLink="/product">{{ 'PRODUCT' | translate }}</a>
+      </li>
+
+      <li *ngIf="isAdmin()">
+        <a routerLink="/supplier">{{ 'SUPPLIER' | translate }}</a>
+      </li>
+
+      <li *ngIf="isAuth()">
+        <a routerLink="/purchase">{{ 'PURCHASE' | translate }}</a>
+      </li>
+
+      <li *ngIf="isAuth()">
+        <a routerLink="/sell">{{ 'SELL' | translate }}</a>
+      </li>
+
+      <li *ngIf="isAuth()">
+        <a routerLink="/profile">{{ 'PROFILE' | translate }}</a>
+      </li>
+
+      <li *ngIf="!isAuth()">
+        <a routerLink="/login">{{ 'LOGIN' | translate }}</a>
+      </li>
+
+      <li *ngIf="!isAuth()">
+        <a routerLink="/register">{{ 'REGISTER' | translate }}</a>
+      </li>
+
+      <li *ngIf="isAuth()">
+        <a (click)="logOut()">{{ 'LOGOUT' | translate }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENT Area-->
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

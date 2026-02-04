@@ -1,0 +1,17 @@
+{
+    "IMS": "IMS",
+    "DASHBOARD": "Dashboard",
+    "TRANSACTIONS": "Transactions",
+    "CATEGORY": "Category",
+    "PRODUCT": "Product",
+    "SUPPLIER": "Supplier",
+    "PURCHASE": "Purchase",
+    "SELL": "Sell",
+    "PROFILE": "Profile",
+    "LOGIN": "Login",
+    "REGISTER": "Register",
+    "LOGOUT": "Logout",
+    "PRODUCTS_PAGE": "Products Page",
+    "ADD_PRODUCT": "Add Product",
+    "LOADING": "Loading..."
+  }
